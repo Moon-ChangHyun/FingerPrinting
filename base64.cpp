@@ -1,10 +1,10 @@
 #include "base64.h"
 
-const char BASE64::table[65] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 /";
+const char BASE64::table[65] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 int BASE64::getIdx(char _6bitChar)
 {
-	if (_6bitChar == ' ')
+	if (_6bitChar == '+')
 		return 62;
 	if (_6bitChar == '/')
 		return 63;

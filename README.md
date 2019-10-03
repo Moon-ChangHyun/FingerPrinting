@@ -6,7 +6,7 @@
     <ul>
       <li>hash(message digest)</li>
       <ul>
-        <li>No input file size limit</li>
+        <li>No input file size limit(Space Complexity: O (1))</li>
         <li>Hash values of several algorithms can be obtained simultaneously (multi-core environment)</li>
         <li>supported Algorithm</li>
         <ul>
@@ -20,6 +20,7 @@
       </ul>
       <li>file encode/decode</li>
       <ul>
+        <li>No input file size limit(Space Complexity: O (1))<li>
         <li>RF4648 compliant implementation</li>
         <li>supported Algorithm</li>
         <ul>

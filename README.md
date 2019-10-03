@@ -26,7 +26,7 @@
           <li>base32</li>
           <li>base64</li>
         </ul>
-        <li>progress bar view supported<li>
+        <li>progress bar view supported</li>
       </ul>
     </ul>
   </ul>

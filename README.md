@@ -1,5 +1,11 @@
 # FingerPrinting
-
+<h2>release version 1.1</h2>
+  <ul>
+    <li>new feature</li>
+    <ul>
+      <li>A new tab has been added to verify integrity</li>
+    </ul>
+  </ul>
 <h2>release version 1.0</h2>
   <ul>
     <li>new feature</li>

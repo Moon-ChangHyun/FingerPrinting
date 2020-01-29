@@ -1,27 +1,12 @@
 #include "hasher.h"
-#include "md5.h"
-#include "sha1.h"
-#include "sha224.h"
-#include "sha256.h"
-#include "sha384.h"
-#include "sha512.h"
 #include <nana/gui/filebox.hpp>
 #include<fstream>
 #include<cmath>
 #include<stdexcept>
 #include<string>
 #include<thread>
-
 using namespace nana;
 using namespace std;
-
-const array<string, hasher::funcNum> hasher::sHashFuncNames = { "md5"s, "sha1"s, "sha224"s, "sha256"s, "sha384"s , "sha512"s };
-const array<std::unique_ptr<abstractHash>, hasher::funcNum> hasher::sHash = {make_unique<MD5>(), make_unique<SHA1>(), make_unique<SHA224>(), make_unique<SHA256>(), make_unique<SHA384>(), make_unique<SHA512>() };
-
-string hasher::getHash(int idx, istream& is) {
-	sHash[idx]->update(is);
-	return sHash[idx]->finalize();
-}
 
 hasher::hasher(window wd) : panel<false>(wd), mPlace(*this), mCheckGroup(*this), mOutputGroup(*this), mpDropbox(make_unique<panel<true>>(this->handle())), mDrawing(mpDropbox->handle()), mRunningCnt(0), mThreadPool(funcNum) {
 	mLabels.reserve(funcNum);

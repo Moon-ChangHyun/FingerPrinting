@@ -1,5 +1,5 @@
 #pragma once
-#include "abstractHash.h"
+#include "hashManager.h"
 #include<memory>
 #include<array>
 #include<string>
@@ -15,14 +15,9 @@
 #include<nana/gui/drawing.hpp>
 #include <nana/threads/pool.hpp>
 
-class hasher : public nana::panel<false>
+class hasher : public nana::panel<false>, public hashManager
 {
 private:
-	static constexpr int funcNum = 6;
-	static const std::array<std::string, funcNum> sHashFuncNames;
-	static const std::array<std::unique_ptr<abstractHash>, funcNum> sHash;
-	static std::string getHash(int, std::istream&);
-
 	nana::place mPlace;
 	nana::group mCheckGroup;
 	std::vector<std::unique_ptr<nana::checkbox>> mCheckBoxes;

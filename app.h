@@ -9,8 +9,8 @@
 
 class app {
 private:
-	static const char* pageFieldName[2];
-	static const std::wstring pageName[2];
+	static const char* pageFieldName[3];
+	static const std::wstring pageName[3];
 	nana::form mForm;
 	std::vector<std::unique_ptr<nana::panel<false>>> mPages;
 	nana::tabbar<size_t> mTab;
